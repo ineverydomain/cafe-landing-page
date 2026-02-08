@@ -1,18 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./**/*.{js,ts,jsx,tsx}",
-  ],
+module.exports = {
+  content: ["./index.html", "./*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
         cafe: {
-          base: '#1A0F0A', // Deep Brown
-          surface: '#251A15', // Slightly lighter brown
-          cream: '#E8DCC4', // Text color
-          gold: '#C5A880', // Accents
-          muted: '#8A7E78', // Muted text
+          base: '#1A0F0A',
+          surface: '#251A15',
+          cream: '#E8DCC4',
+          gold: '#C5A880',
+          muted: '#8A7E78',
         }
       },
       fontFamily: {
@@ -22,7 +19,7 @@ export default {
       transitionTimingFunction: {
         'steam': 'cubic-bezier(0.22, 1, 0.36, 1)',
       }
-    }
+    },
   },
   plugins: [],
 }

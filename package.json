@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run build:css && tsc && vite build",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./public/output.css",
+    "build:css:watch": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch",
     "preview": "vite preview"
   },
   "dependencies": {
