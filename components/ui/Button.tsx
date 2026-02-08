@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({ variant = 'primary', children, c
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={`${baseStyles} ${variants[variant]} ${className || ''}`}
-      {...props}
+      {...(props as React.ComponentProps<typeof motion.button>)}
     >
       {children}
     </motion.button>
